@@ -1,0 +1,114 @@
+Back to List
+
+var ob =
+{
+    "2015-03-24": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "150",
+        "promo": "",
+        "status": "available"
+    },
+    "2015-03-25": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "150",
+        "promo": "",
+        "status": "available"
+    },
+    "2015-03-26": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "150",
+        "promo": "",
+        "status": "available"
+    },
+    "2015-03-27": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "100",
+        "promo": "",
+        "status": "available"
+    },
+    "2015-03-28": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "100",
+        "promo": "",
+        "status": "available"
+    },
+    "2015-03-29": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "100",
+        "promo": "",
+        "status": "available"
+    },
+
+
+    "2015-04-10": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "",
+        "promo": "",
+        "status": "booked"
+    },
+    "2015-04-11": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "",
+        "promo": "",
+        "status": "booked"
+    },
+
+    "2015-05-01": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "",
+        "promo": "",
+        "status": "unavailable"
+    },
+    "2015-05-02": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "",
+        "promo": "",
+        "status": "unavailable"
+    },
+    "2015-05-03": {
+        "bind": 0,
+        "info": "",
+        "notes": "",
+        "price": "",
+        "promo": "",
+        "status": "unavailable"
+    },
+
+
+}
+
+
+
+var a1 = [];
+var a2 = [];
+
+$.each( ob, function( key, ob ) {
+    if(ob.price > 100 && ob.status == 'available'){
+        a1.push(key);
+    }
+    if(ob.status == 'booked' || ob.status == 'unavailable'){
+        a2.push(key);
+    }
+});
+console.log(a1);
+console.log(a2);
