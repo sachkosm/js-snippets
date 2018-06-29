@@ -9,7 +9,7 @@ Element
 8. Uses "return" has no methods - has no "render"
 
 
-Fictional Component
+Functional Component
 1. It is a Function
 2. Accept argument as object called "props"
 3. Returns Element(s)
