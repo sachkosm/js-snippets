@@ -17,7 +17,7 @@
 17. Database Optimization
 18. Brosers compatability:  http://browsershots.org/
 19. https://www.keycdn.com/blog/browser-compatibility-testing-tools/
-20. Movile view
+20. Mobile view
 21. Lighthouse, an automated tool and a part of Chrome Developer Tools
 22. https://developers.google.com/web/tools/chrome-user-experience-report/
 23. Analyze and optimize your website with PageSpeed tools: https://developers.google.com/speed/?hl=en-US&utm_source=PSI&utm_medium=incoming-link&utm_campaign=PSI
