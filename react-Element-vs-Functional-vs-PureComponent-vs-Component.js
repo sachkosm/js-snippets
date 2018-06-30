@@ -16,7 +16,7 @@ Functional (stateLess) Component
 4. Can apply the props to the output element
 5. Can be called as a function
 6. Has no state
-7. Has no "render" method although can have inside functions and bars
+7. Has no "render" method although can have inside functions and vars
 8. Has no Constructor
 
 For simple, presentational-only components that need to be easily reused,
@@ -29,9 +29,11 @@ need to optimise their render method (as you can't define shouldComponentUpdate 
 
 Pure Component
 1. Shallow comparison on both props and state
-2. Handles shouldComponentUpdate automatically
+2. Doesn’t rpovide shouldComponentUpdate() lifecycle hook.
+2. Handles shouldComponentUpdate() automatically.
 3. Instead of mutating 'props' create new object for 'props'
 
+If your React component’s render() function renders the same result given the same props and state, you can use React.PureComponent for a performance boost in some cases.
 Extend PureComponent if you know your output depends on simple props/state
 ("simple" meaning no nested data structures, as PureComponent performs a shallow compare)
 AND you need/can get some performance improvements.
