@@ -9,7 +9,7 @@ Element
 8. Uses "return" has no methods - has no "render"
 
 
-Functional Component
+Functional (stateLess) Component
 1. It is a Function
 2. Accept argument as object called "props"
 3. Returns Element(s)
@@ -19,6 +19,22 @@ Functional Component
 7. Has no "render" method although can have inside functions and bars
 8. Has no Constructor
 
+For simple, presentational-only components that need to be easily reused,
+prefer stateless functional components.
+This way you're sure they are decoupled from the actual app logic, that
+they are dead-easy to test and that they don't have unexpected side effects.
+The exception is if for some reason you have a lot of them or if you really
+need to optimise their render method (as you can't define shouldComponentUpdate for a stateless functional component).
+
+
+Pure Component
+1. Shallow comparison on both props and state
+2. Handles shouldComponentUpdate automatically
+3. Instead of mutating 'props' create new object for 'props'
+
+Extend PureComponent if you know your output depends on simple props/state
+("simple" meaning no nested data structures, as PureComponent performs a shallow compare)
+AND you need/can get some performance improvements.
 
 Class Component
 1. It is a Class - not a function
@@ -28,12 +44,12 @@ Class Component
 5. It must define method "render"
 6. Method render will be called by React.Dom()
 7. The Constructor will be called first with props as argument automatically
-8. It has lifecycle hooks (callback) where we can specify function to be executed at the lifecycle stages - like componentWillMount, componentDidMount etc..
+8. It has lifecycle hooks (callback) where we can specify function to be executed at the lifecycle stages -
+like componentWillMount, componentDidMount etc..
 
-Pure Component
-1. Shallow comparison on both props and state
-2. Handles shouldComponentUpdate automatically
-3. Instead of mutating 'props' create new object for 'props'
+Extend Component and implement your own shouldComponentUpdate if you need some performance gains by performing
+custom comparison logic between next/current props and state. For example, you can quickly perform a deep comparison using lodash#isEqual:
+
 
 Render method can have only one top HTML tag or Component
 It can have multiple nested tags or Components
