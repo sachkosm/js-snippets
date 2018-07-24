@@ -60,18 +60,17 @@ class MyComponent extends React.PureComponent {
 
 Class Component
 1. It is a Class - not a function
-2. As class it has a Constructor(props)
-3. Constructor must call super(prop)
-4. It can have "State" - state
+2. As class it has a constructor(props)
+3. constructor must call super(prop)
+4. It can have "state" - state
 5. It must define method "render"
 6. Method render will be called by React.Dom()
-7. The Constructor will be called first with props as argument automatically
+7. The constructor will be called first with props as argument automatically
 8. It has lifecycle hooks (callback) where we can specify function to be executed at the lifecycle stages -
 like componentWillMount, componentDidMount etc..
 
 Extend Component and implement your own shouldComponentUpdate if you need some performance gains by performing
 custom comparison logic between next/current props and state. For example, you can quickly perform a deep comparison using lodash#isEqual:
-
 
 Render method can have only one top HTML tag or Component
 It can have multiple nested tags or Components
@@ -86,7 +85,7 @@ Props can be used to modify state or to create new props that can be send back t
 The compare between React.Dom and Browser.Dom is shallow.
 If a deep leaf of a prop or state is made - all parent objects in the tree up to the top must be update by cloning.
 
-State should modified by calling setState( { statePropName: newValue }) not directly
+State should be modified by calling setState( { statePropName: newValue }) - not directly
 ----- example ----------------------------
 
 import React from 'react';
