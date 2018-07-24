@@ -7,7 +7,11 @@ Element
 6. It is cheap because it is an object
 7. We use it because it will be included into the React Dom and it will be controlled by React
 8. Uses "return" has no methods - has no "render"
+----- example ----------------------------
 
+const element = <h1>Hello, world!</h1>;
+
+------------------------------------------
 
 Functional (stateLess) Component
 1. It is a Function
@@ -25,7 +29,13 @@ This way you're sure they are decoupled from the actual app logic, that
 they are dead-easy to test and that they don't have unexpected side effects.
 The exception is if for some reason you have a lot of them or if you really
 need to optimise their render method (as you can't define shouldComponentUpdate for a stateless functional component).
+----- example ----------------------------
 
+const MyComponent = ({ name }) => {
+  return <h1>Hello {name}</h1>
+}
+
+------------------------------------------
 
 Pure Component
 1. Shallow comparison on both props and state
@@ -33,10 +43,20 @@ Pure Component
 2. Handles shouldComponentUpdate() automatically.
 3. Instead of mutating 'props' create new object for 'props'
 
-If your React component’s render() function renders the same result given the same props and state, you can use React.PureComponent for a performance boost in some cases.
+If your React component’s render() function renders the same result given the same props
+and state, you can use React.PureComponent for a performance boost in some cases.
 Extend PureComponent if you know your output depends on simple props/state
 ("simple" meaning no nested data structures, as PureComponent performs a shallow compare)
 AND you need/can get some performance improvements.
+----- example ----------------------------
+
+class MyComponent extends React.PureComponent {
+  render() {
+    return <h1>Hello {this.props.name}</h1>
+  }
+}
+
+------------------------------------------
 
 Class Component
 1. It is a Class - not a function
@@ -67,3 +87,20 @@ The compare between React.Dom and Browser.Dom is shallow.
 If a deep leaf of a prop or state is made - all parent objects in the tree up to the top must be update by cloning.
 
 State should modified by calling setState( { statePropName: newValue }) not directly
+----- example ----------------------------
+
+import React from 'react';
+
+class Component extends React.Component {
+  constructor(props, context){
+    super(props);
+    this.state = {name: props.name};
+  }
+  render() {
+    return <div>{this.state.name}</div>;
+  }
+}
+
+export default Component;
+
+------------------------------------------
