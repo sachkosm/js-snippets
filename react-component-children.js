@@ -4,7 +4,7 @@
 //It is used when we do not know how many elements we will have inside tha Component tags
 
 //For example a select html element we may not know how many options will have.
-//The options may be generated dynamicly and may changed
+//The options may be generated dynamicly and may change.
 
 class Chosen extends React.Component {
   render() {
