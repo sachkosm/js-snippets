@@ -25,23 +25,23 @@ Object.keys(obj).forEach(function(key, idx) {
 });
 
 //Travers nested
-const traverse = (str, obj, closingTag) => {
+const traverse = (openingTag, obj, closingTag) => {
   for(let k in obj) {
     
     if(obj[k] && typeof obj[k] === 'object') {
 
       if(Array.isArray(obj[k])) {
-        let accStr = str + k + ": ["
+        let accStr = openingTag + k + ": ["
         let accClosingTag = "]" + closingTag
         traverse(accStr, obj[k], accClosingTag)
       } else {
-        let accStr = str + k + ": {"
+        let accStr = openingTag + k + ": {"
         let accClosingTag = "}" + closingTag
         traverse(accStr, obj[k], accClosingTag)
       }
 
     } else {
-      console.log(str + k + ": " + obj[k] + closingTag);
+      console.log(openingTag + k + ": " + obj[k] + closingTag);
       //console.log(obj[k]) // All values only
       //console.log(k) // All keys only
     }
