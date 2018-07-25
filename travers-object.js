@@ -27,17 +27,17 @@ Object.keys(obj).forEach(function(key, idx) {
 //Travers nested
 const traverse = (openingTag, obj, closingTag) => {
   for(let k in obj) {
-    
+
     if(obj[k] && typeof obj[k] === 'object') {
 
       if(Array.isArray(obj[k])) {
-        let accStr = openingTag + k + ": ["
+        let accOpeningTag = openingTag + k + ": ["
         let accClosingTag = "]" + closingTag
-        traverse(accStr, obj[k], accClosingTag)
+        traverse(accOpeningTag, obj[k], accClosingTag)
       } else {
-        let accStr = openingTag + k + ": {"
+        let accOpeningTag = openingTag + k + ": {"
         let accClosingTag = "}" + closingTag
-        traverse(accStr, obj[k], accClosingTag)
+        traverse(accOpeningTag, obj[k], accClosingTag)
       }
 
     } else {
