@@ -20,9 +20,7 @@ function* genFunc() {
 
 var it = genFunc();
 var promise = it.next().value //returns a Promise
-
 promise.then(data => {
-
   let nextPromise = data.json() //json() returns promise - otherwise we will just call it.next(..)
   nextPromise.then((t) => {
     it.next(t); // call the next yield - provide the response as json text
