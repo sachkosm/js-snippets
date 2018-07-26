@@ -19,7 +19,7 @@ var promise = it.next().value //returns a Promise
 console.log(promise);
 
 promise.then(data => {
-  console.log(1);
+  console.info(1);
   console.log(it.next().value)
 
   console.log(data)
