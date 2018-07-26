@@ -24,4 +24,4 @@ var iterator = genloop(); //return iterator
 console.log(iterator.next())
 console.log(iterator.next())
 console.log(iterator.next())
-console.log(iterator.next())
+console.log(iterator.next().done)
