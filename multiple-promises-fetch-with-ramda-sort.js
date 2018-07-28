@@ -23,6 +23,7 @@ const fetchOneUrl = url => fetch(url)
 Promise
   .all(urls.map(fetchOneUrl))
   .then(() => {
-    const sortedData = sortByPropDesc('gender')(arrCombinedResult);
+    //const sortedData = R.sortBy(R.prop(['email']))(arrCombinedResult); //sort by first level prop
+    const sortedData = R.sortBy(R.path(['login','username']))(arrCombinedResult); //sort by nested level
     console.log(sortedData);
   })
