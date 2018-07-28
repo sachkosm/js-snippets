@@ -4,7 +4,8 @@
   "description": "",
   "main": "arrow-function.js",
   "dependencies": {
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.2.0",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {},
   "scripts": {
