@@ -20,10 +20,18 @@ const fetchOneUrl = url => fetch(url)
     //console.log(sortedData);
   })
 
+
 Promise
   .all(urls.map(fetchOneUrl))
   .then(() => {
     //const sortedData = R.sortBy(R.prop(['email']))(arrCombinedResult); //sort by first level prop
     const sortedData = R.sortBy(R.path(['login','username']))(arrCombinedResult); //sort by nested level
     console.log(sortedData);
+
+  }).catch((error)=> {
+    console.log('errorFromMyPromise: ' + error); 
+
   })
+
+
+
