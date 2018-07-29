@@ -29,3 +29,4 @@ console.log(R.split(' ',"3455 dr7767ffth 7677 hbfn"))
 
 //Concat 2 arrays
 console.log(R.concat(arr, [3,5,6]))
+
