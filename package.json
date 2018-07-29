@@ -4,6 +4,7 @@
   "description": "",
   "main": "arrow-function.js",
   "dependencies": {
+    "folktale": "^2.1.0",
     "node-fetch": "^2.2.0",
     "ramda": "^0.25.0"
   },

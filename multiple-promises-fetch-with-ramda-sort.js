@@ -5,7 +5,7 @@ const sortByProp = (propName) => R.sortBy(R.prop(propName));
 const sortByPropDesc = (propName) => R.compose(R.reverse, R.sortBy(R.prop(propName)));
 
 const arrCombinedResult = [];
-const urls = Array(15);
+const urls = Array(25);
 urls.fill('https://randomuser.me/api/') // using user random emulation
 
 
