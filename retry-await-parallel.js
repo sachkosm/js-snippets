@@ -5,7 +5,7 @@ const syncData = function (data){
     console.log(data)
 }
 
-const dataResult = function () {
+const dataResult = function (callback) {
     //Executes multiple fetch requests in parallel
     //Retries every request up to Num_RETRIES if response status is not 200
     //Combines the response of all the fetch data in one array
@@ -26,7 +26,7 @@ const dataResult = function () {
         await Promise.all(promises)
             .then(() => {
                 sortedData = R.sortBy(R.path(['login', 'username']))(arrCombinedResult); //sort by nested level
-                syncData(sortedData)
+                callback(sortedData)
             })
             .catch(error => console.log(error));
 
@@ -71,4 +71,4 @@ const dataResult = function () {
     
 }
 
-dataResult()
+dataResult(syncData)
