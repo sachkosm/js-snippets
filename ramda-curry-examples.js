@@ -15,6 +15,9 @@ assert.equal(3456, arr.reduce(R.max()),"Max test Fail")
 console.log(arr.reduce(R.min()))
 assert.equal(-567, arr.reduce(R.min()), "Min test Fail")
 
+console.assert(-567===arr.reduce(R.min()), "Min test Fail")
+
+
 //Ramda functions are already curryed
 //Can be used in any of the following way
 const splitBySpace = R.split(' ')
@@ -23,3 +26,6 @@ console.log(splitBySpace("As drth hbn"))
 console.log(R.split(' ')("Ads drffth hbfn"))
 
 console.log(R.split(' ',"3455 dr7767ffth 7677 hbfn"))
+
+//Concat 2 arrays
+console.log(R.concat(arr, [3,5,6]))
