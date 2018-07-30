@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class react-component-snippet extends Component {
+class ReactComponentName extends Component {
     constructor(props) {
         super(props);
 
@@ -44,13 +44,13 @@ class react-component-snippet extends Component {
     }
 }
 
-react-component-snippet.propTypes = {
+ReactComponentName.propTypes = {
 
 };
 
-export default react-component-snippet;
+export default ReactComponentName;
 
-==============================================
+//==============================================
 //Class component with redux and connect
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -61,11 +61,11 @@ function mapStateToProps(state) {
     };
 }
 
-class react-component-snippet extends Component {
+class ReactComponentName extends Component {
     render() {
         return (
             <div>
-                
+
             </div>
         );
     }
@@ -95,38 +95,38 @@ const mapDispatchToProps = dispatch =>
 
 	}, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(react-component-snippet);
-==============================
+export default connect(mapStateToProps, mapDispatchToProps)(ReactComponentName);
+//==============================
 //Class Pure Component
 import React, { PureComponent } from 'react'
 
-export default class react-component-snippet extends PureComponent {
+export default class ReactComponentName extends PureComponent {
   render() {
     return (
       <div>
-        
+
       </div>
     )
   }
 }
 
-=============================
+//=============================
 //Stateless component - functional component
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const react-component-snippet = props => {
+const ReactComponentName = props => {
     return (
         <div>
-            
+
         </div>
     );
 };
 
-react-component-snippet.propTypes = {
-    
+ReactComponentName.propTypes = {
+
 };
 
-export default react-component-snippet;
+export default ReactComponentName;
 
-==================================
+//==================================
