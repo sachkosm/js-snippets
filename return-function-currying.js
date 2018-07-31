@@ -1,5 +1,5 @@
 // In users.find(curriedFunc)
-// Find wwill call our function as follow:
+// Find will call our function as follow:
 //curriedFunc(item, index, arr) -> but we need to add additional parameter 'name'
 
 const users = ['a', 'b', 'c']
