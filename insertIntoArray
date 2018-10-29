@@ -1,0 +1,4 @@
+const insertIntoArray = function (array, object, toIndex) {
+            array.splice(toIndex, 0, object);
+        };
+        
