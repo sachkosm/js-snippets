@@ -1,0 +1,5 @@
+const removeFromArray = function (array, object) {
+            if (array.indexOf(object) >= 0) {
+                array.splice(array.indexOf(object), 1);
+            }
+        };
