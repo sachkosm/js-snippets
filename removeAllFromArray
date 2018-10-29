@@ -1,0 +1,7 @@
+const removeAllFromArray = function (array, toRemove) {
+            toRemove.forEach(function (item) {
+                if (array.indexOf(item) >= 0) {
+                    array.splice(array.indexOf(item), 1);
+                }
+            });
+        };
