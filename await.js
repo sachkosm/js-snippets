@@ -1,3 +1,5 @@
+// await is changing the order of the execution
+
 //Using await
 async function async_await() {
 
