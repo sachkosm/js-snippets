@@ -2,6 +2,7 @@
 async function async_await() {
 
 	//Creates a Promise that wil be resolved after 3 seconds
+	//Initiali this is pending Promise - after resolving it - it will be come the value of the resolve
 	var x = new Promise((resolve, reject) => setTimeout(() => {
 		resolve(15)
 	}, 3000));
@@ -10,13 +11,13 @@ async function async_await() {
 
 	console.log('After Promise x=>', x)
 
-	//await will cause for the to wait for the result
+	//await will cause thsi function to stop and wait for the Promise to resolve
 	//the diference from SYNC execution is that ONLY this function is stopped and waiting 
-	//JS process will keep executing the lines after the functions
+	//JS process will keep executing the lines after this functions
 	await x.then(() => console.log('Then x=>', x))
 	//now the promise is resolved
 
-	//At this line x is now the result of the resolved parameter
+	//At this line x is now the result of the resolved Promise
 	console.log('After await x=>', x)
 }
 
@@ -38,7 +39,7 @@ console.log('===== Line executed After the async_await function ============')
 //NOT Using await
 async function async () {
 
-	//Creates a Promise that wil be resolved after 3 seconds
+	//Creates a Promise that will be resolved after 3 seconds
 	var x = new Promise((resolve, reject) => setTimeout(() => {
 		resolve(15)
 	}, 3000));
