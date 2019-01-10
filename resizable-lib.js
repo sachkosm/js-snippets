@@ -1,5 +1,4 @@
-
-export const znResizeable = function (resizer, drawer, report, config) {
+export default function znResizeable(resizer, drawer, report, config) {
     //Small library to make the ReportDrawer resizable
 
     if (!resizer) { console.error('Resizer element is not provided!'); return }
@@ -30,10 +29,6 @@ export const znResizeable = function (resizer, drawer, report, config) {
         background: url(public_libs/resources/vsizegrip.png) no-repeat center center #ffffff;
         min-height: 200px
     `
-
-    function currentWidth() {
-        return { 'drawerStartWidth': drawerStartWidth, 'newDrawerWidth': newDrawerWidth, 'reportStartWidth': reportStartWidth, 'newReportWidth': newReportWidth }
-    }
 
     function getDrawerStartWidth() {
         return drawerStartWidth
@@ -86,8 +81,9 @@ export const znResizeable = function (resizer, drawer, report, config) {
             window.startX = e.clientX;
             drawerStartWidth = parseInt(document.defaultView.getComputedStyle(drawer).width, 10);
             report ? reportStartWidth = parseInt(document.defaultView.getComputedStyle(report).width, 10) : 0;
-            document.documentElement.addEventListener('mousemove', doDrag, false);
-            document.documentElement.addEventListener('mouseup', stopDrag, false);
+            window.addEventListener('mousemove', doDrag, false);
+            window.addEventListener('mouseup', stopDrag, false);
+            document.body.style['pointer-events'] = 'none'; //prevent pointers events when entering tableau report
         }
 
         //calculate and apply new width according to the mouse movement
@@ -105,11 +101,20 @@ export const znResizeable = function (resizer, drawer, report, config) {
         }
         //Remove the events that track the mouse movements and update golden layout
         function stopDrag(e) {
-            document.documentElement.removeEventListener('mousemove', doDrag, false);
-            document.documentElement.removeEventListener('mouseup', stopDrag, false);
+            e.preventDefault();
+            document.body.style['pointer-events'] = 'auto'; //restore pointers events
+            window.removeEventListener('mousemove', doDrag, false);
+            window.removeEventListener('mouseup', stopDrag, false);
+            drawer.style.width = newDrawerWidth + 'px'
+            if (report) {
+                report.style.width = newReportWidth + 'px'
+            }
             setTimeout(() => {
                 window.dispatchEvent(new Event('resize'));
             }, 0)
+            var event = new Event('znResizeableStopDrag');
+            // Dispatch the event.
+            window.dispatchEvent(event);
         }
 
         //Init
@@ -151,7 +156,6 @@ export const znResizeable = function (resizer, drawer, report, config) {
         removeResizing: removeResizing,
         setReport: setReport,
         getDrawerStartWidth: getDrawerStartWidth,
-        currentWidth: currentWidth,
         setNewReportWidthBasedOnDrawer: setNewReportWidthBasedOnDrawer,
         isInitialized: isInitialized,
         reportIsSet: reportIsSet
