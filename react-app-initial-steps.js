@@ -117,5 +117,19 @@ example:
 
 add jest
 
+add sass/scss
+npm install --save-dev node-sass
+node-sass --include-path sass INPUT_FILE.scss OUTPUT_FILE.css
+
+//package.json
+"scripts": {
+"sass:compile": "node-sass --include-path sass INPUT_FILE.scss OUTPUT_FILE.css",
+}
+https://medium.com/@jstubblefield7939/getting-started-with-sass-scss-and-nodejs-6f7b4589aaf2
+ 
+ 
+
+
+
 
 
