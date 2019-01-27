@@ -1,4 +1,17 @@
+const myFunc = () => {
+  return async (dispatch) => {
+    try {
+      await dispatch(funcA())
+      await dispatch(funcB())
+      await dispatch(funcC())
+    } catch (error) {
+      //error handling
+    }
+  }
+}    
 
+
+===================================================================
 
 // If you use Redux Thunk...
 import { createStore, applyMiddleware } from 'redux'
