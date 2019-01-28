@@ -23,6 +23,14 @@ Reac-Redux
   if they have been connected with connect
   
 7. Connect wraps the compnents and provides the props from the redux store
+
+Redux-Thunk
+8. Will add a function that will monitor all dispatched actions ( it is done when the store is created - createStore)
+    - in case the action is a function
+        - it will execute the function and return to the dispacher the result from that function, the dispatch will return it also
+            - in case the return is promiss - then we can use dispath(action).then(result){}
+
+    - in case it is a plain object will just pass it to the dispacher for processing
   
   
 
