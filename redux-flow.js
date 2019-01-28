@@ -25,7 +25,9 @@ Reac-Redux
 7. Connect wraps the compnents and provides the props from the redux store
 
 Redux-Thunk
-8. Will add a function that will monitor all dispatched actions ( it is done when the store is created - createStore)
+It provides a third-party extension point between dispatching an action, and the moment it reaches the reducer. 
+8. Replaces the store.dispatch function with another function that will do something and then return original dispatch
+( it is added when the store is created - createStore)
     - in case the action is a function
         - it will execute the function and return to the dispacher the result from that function, the dispatch will return it also
             - in case the return is promiss - then we can use dispath(action).then(result){}
