@@ -8,3 +8,5 @@ https://anders.com/blockchain/blockchain.html
 https://github.com/julienr/ipynb_playground/blob/master/bitcoin/dumbcoin/dumbcoin.ipynb
 
 https://keywordtool.io/blog/google-autocomplete/
+
+https://backlinko.com/google-ranking-factors
