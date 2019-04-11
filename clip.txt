@@ -12,3 +12,6 @@ https://keywordtool.io/blog/google-autocomplete/
 https://backlinko.com/google-ranking-factors
 
 https://static.googleusercontent.com/media/www.google.com/en/us/insidesearch/howsearchworks/assets/searchqualityevaluatorguidelines.pdf
+
+google search operators
+https://support.google.com/websearch/answer/2466433?hl=en
