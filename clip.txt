@@ -1,1 +1,8 @@
 
+http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/
+
+https://github.com/adilmoujahid/blockchain-python-tutorial
+
+https://anders.com/blockchain/blockchain.html
+
+https://github.com/julienr/ipynb_playground/blob/master/bitcoin/dumbcoin/dumbcoin.ipynb
