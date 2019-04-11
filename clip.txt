@@ -10,3 +10,5 @@ https://github.com/julienr/ipynb_playground/blob/master/bitcoin/dumbcoin/dumbcoi
 https://keywordtool.io/blog/google-autocomplete/
 
 https://backlinko.com/google-ranking-factors
+
+https://static.googleusercontent.com/media/www.google.com/en/us/insidesearch/howsearchworks/assets/searchqualityevaluatorguidelines.pdf
