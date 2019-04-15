@@ -18,3 +18,6 @@ https://support.google.com/websearch/answer/2466433?hl=en
 
 
 https://www.npmjs.com/package/throttle-debounce
+
+
+https://stackoverflow.com/questions/28922275/in-reactjs-why-does-setstate-behave-differently-when-called-synchronously/28922465#28922465
