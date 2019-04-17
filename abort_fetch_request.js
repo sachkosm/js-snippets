@@ -1,4 +1,6 @@
 https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request
+https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort
+https://github.com/mo/abortcontroller-polyfill#readme
 
 <script>
     // Create an instance.
