@@ -25,3 +25,5 @@ https://stackoverflow.com/questions/28922275/in-reactjs-why-does-setstate-behave
 https://medium.freecodecamp.org/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb
 
 https://www.npmjs.com/package/react-debounce-input
+
+https://developers.google.com/web/updates/2017/09/abortable-fetch
