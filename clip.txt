@@ -31,3 +31,5 @@ https://www.npmjs.com/package/abort-controller
 
 https://sportysacademy.com/files/2016/02/Cessna-172S-Checklist_singlepage.pdf
 https://www.flywithpat.com/checklists-cessna-172sp/
+
+https://cointelegraph.com/bitcoin-for-beginners/how-blockchain-technology-works-guide-for-beginners#what-is-mining
