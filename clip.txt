@@ -28,3 +28,6 @@ https://www.npmjs.com/package/react-debounce-input
 
 https://developers.google.com/web/updates/2017/09/abortable-fetch
 https://www.npmjs.com/package/abort-controller
+
+https://sportysacademy.com/files/2016/02/Cessna-172S-Checklist_singlepage.pdf
+https://www.flywithpat.com/checklists-cessna-172sp/
