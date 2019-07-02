@@ -32,11 +32,18 @@ function hashPassword(user, pass) {
 	})
 }
 
-async function f() {
-	await hashPassword('user', 'veryStrongPassword45')
-		.then((userStore) => {
-			console.log(userStore)
-		})
+
+//Direct use
+hashPassword('user', 'veryStrongPassword45')
+	.then((userStore) => {
+		console.log(userStore)
+	})
+
+
+//Use in async function
+const result = async()=>{
+    const r = await hashPassword('user', 'veryStrongPassword45')
+    console.log(r)
 }
 
-f()
+result()
