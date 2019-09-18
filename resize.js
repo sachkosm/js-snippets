@@ -40,8 +40,19 @@ export function resizeVerticaly(inputObj) {
     function dragMouseDown(e) {
         drag.x = e.clientX;
         drag.y = e.clientY;
+        
+        //Desable default mpouse poiter events
+        first.style["pointer-events"] = 'none'
+        second.style["pointer-events"] = 'none'
+        
         document.onmousemove = onMouseMove;
-        document.onmouseup = () => { document.onmousemove = document.onmouseup = null; }
+        document.onmouseup = () => { 
+            document.onmousemove = document.onmouseup = null; 
+
+            //Restore mouse events
+            first.style["pointer-events"] = 'auto'
+            second.style["pointer-events"] = 'auto'
+        }
     }
 
     // function that will be called whenever the up event of the mouse is raised
@@ -54,7 +65,6 @@ export function resizeVerticaly(inputObj) {
 
         //const offsetLeft = element.offsetLeft;
         const offsetTop = element.offsetTop;
-
 
         // const first = document.getElementById("first");
         // const second = document.getElementById("second");
